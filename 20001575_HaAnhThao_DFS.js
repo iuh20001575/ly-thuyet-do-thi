@@ -22,7 +22,7 @@ function Stack() {
             return this.length === 0;
         },
     };
-};
+}
 
 /**
  * DFS
@@ -49,10 +49,8 @@ function DFS(dsKe, start) {
             } else if (i === arrTop.length - 1) stack.pop();
     }
 
-    return {
-        thuTuDuyet: v,
-        danhSachKeDFS: d,
-    };
+    console.log(`Thứ tự duyệt: ${v.join(', ')}`);
+    console.log('Danh sách kề DFS: ', d);
 }
 
 // Danh sách kề của đồ thị cần duyệt
@@ -70,7 +68,4 @@ const dsKe = {
     11: [7, 9],
 };
 
-const { thuTuDuyet, danhSachKeDFS } = DFS(dsKe, 1);
-
-console.log(`Thứ tự duyệt: ${thuTuDuyet.join(', ')}`);
-console.log('Danh sách kề DFS: ', danhSachKeDFS);
+DFS(dsKe, 1);
